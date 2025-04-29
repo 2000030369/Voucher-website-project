@@ -1,0 +1,115 @@
+.hero-section {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    color: white;
+    animation: fadeInDown 1s ease;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-button {
+    background: #fff;
+    color: #ff7e5f;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .hero-button:hover {
+    background: #ffe0d2;
+  }
+  
+  /* Animation */
+  @keyframes fadeInDown {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  
+
+.voucher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .voucher-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .voucher-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .voucher-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .voucher-card h3 {
+    font-size: 20px;
+    margin: 10px 0 5px 0;
+  }
+  
+  .voucher-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    flex-grow: 1; 
+  }
+  
+  .voucher-card h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  .voucher-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .voucher-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
+  

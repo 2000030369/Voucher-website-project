@@ -1,0 +1,25 @@
+<div class="admin-container">
+    <h2>Admin Panel - Manage Vouchers</h2>
+  
+    <form (ngSubmit)="addVoucher()" class="admin-form">
+      <input type="text" [(ngModel)]="title" name="title" placeholder="Voucher Title" required />
+      <textarea [(ngModel)]="description" name="description" placeholder="Description" required></textarea>
+      <input type="number" [(ngModel)]="price" name="price" placeholder="Price" required />
+      <input type="text" [(ngModel)]="imageUrl" name="imageUrl" placeholder="Image URL" required />
+  
+      <button type="submit">Add Voucher</button>
+    </form>
+  
+    <div class="voucher-list">
+      <div *ngFor="let voucher of vouchers" class="voucher-item">
+        <img [src]="voucher.imageUrl" alt="{{ voucher.title }}">
+        <div class="voucher-info">
+          <h3>{{ voucher.title }}</h3>
+          <p>{{ voucher.description }}</p>
+          <h4>₹{{ voucher.price }}</h4>
+          <button (click)="deleteVoucher(voucher.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

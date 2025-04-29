@@ -1,0 +1,24 @@
+<div class="checkout-container" *ngIf="voucher">
+    <h2 class="checkout-title">🛒 Order Details</h2>
+  
+    <div class="voucher-summary animate-slide-in">
+        <img [src]="voucher.imageUrl" alt="Voucher Image" class="voucher-image" />
+
+      <div class="voucher-info">
+        <h3>{{ voucher.title }}</h3>
+        <p class="voucher-description">{{ voucher.description }}</p>
+        <p class="voucher-price"><strong>Price:</strong> ₹{{ voucher.price }}</p>
+      </div>
+    </div>
+  
+    
+  
+    <div *ngIf="paymentDone" class="payment-card animate-flip">
+      <div class="voucher-reveal">
+        <h3>🎉 Payment Successful!</h3>
+        <p>Here’s your unique voucher code:</p>
+        <h1>{{ uniqueCode }}</h1> 
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,29 @@
+<div *ngIf="loading" class="loading-container">
+    <div class="spinner"></div>
+  </div>
+  
+  <div *ngIf="!loading" class="voucher-details-container animate-fade-in">
+    <div class="voucher-header">
+      <img [src]="voucher.imageUrl" alt="{{ voucher.title }}" class="voucher-image" />
+  
+      <div class="voucher-info">
+        <div class="voucher-title-wrapper">
+          <h1 class="voucher-title">{{ voucher.title }}</h1>
+          <div class="badges">
+            <span class="badge hot">🔥 Top Seller</span>
+            <span class="badge instant">🎁 Instant Delivery</span>
+            <span class="badge secure">💳 Secure Payment</span>
+          </div>
+        </div>
+  
+        <p class="voucher-price">₹{{ voucher.price }}</p>
+        <button class="buy-button" (click)="buyNow()">Buy Now</button>
+      </div>
+    </div>
+  
+    <div class="voucher-description">
+      <h2>About this Voucher</h2>
+      <p>{{ voucher.description }}</p>
+    </div>
+  </div>
+  

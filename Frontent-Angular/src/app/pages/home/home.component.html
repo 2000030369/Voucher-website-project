@@ -1,0 +1,21 @@
+
+<div class="hero-section">
+    <div class="hero-content">
+      <h1>Discover Amazing Vouchers 🎁</h1>
+      <p>Save more with instant vouchers for shopping, food, travel and more!</p>
+      <a routerLink="/voucher" class="hero-button">Browse Vouchers</a>
+    </div>
+  </div>
+  
+
+
+<div class="voucher-grid">
+    <div class="voucher-card" *ngFor="let voucher of vouchers">
+      <img [src]="voucher.imageUrl" alt="{{ voucher.title }}" class="voucher-img">
+      <h3>{{ voucher.title }}</h3>
+      <p>{{ voucher.description }}</p>
+      <h4>₹{{ voucher.price }}</h4>
+      <a [routerLink]="['/voucher', voucher.id]" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+  
